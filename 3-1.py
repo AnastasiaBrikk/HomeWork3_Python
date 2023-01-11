@@ -3,9 +3,10 @@
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-list1 = [2, 3, 5, 9, 3]
-list2 = [1, 3]
+list1 = input('Введите числа через пробел: ').split()
 
+for i in range(len(list1)):  # преобразование списка строк в список целых чисел
+    list1[i] = int(list1[i])
 def suma(list):
     sum = 0
     for i in list[1::2]: # берём срез с шагом два от второго элемента
@@ -14,4 +15,3 @@ def suma(list):
     print(f'Sum of elements is {sum}')
 
 suma(list1)
-suma(list2)
